@@ -24,23 +24,24 @@ function showPage(list, page) {
    ul.innerHTML = '';
    for (let i = 0; i < list.length; i++) {
       if (i >= startIndex && i < endIndex) {
-     innerHTML += `  
-         <li class='student-list cf'>
-            <div class='student-details'>
-               <img class='avatar'>
-               <h3>${list[i].name}</h3>
-               <span class='email'>${list[i].email}</span>
-            </div>
-            <div class='joined-details>
-               <span class='date'>${list[i].date}</span>
-            </div>
-         </li>
+         let studentList = `  
+            <li class='student-list cf'>
+               <div class='student-details'>
+                  <img class='avatar'>
+                  <h3>${list[i].name.first} ${list[i].name.last}</h3>
+                  <span class='email'>${list[i].email}</span>
+               </div>
+               <div class='joined-details>
+                  <span class='date'>${list[i].registered.date}</span>
+               </div>
+            </li>
        `
-       ul.insertAdjacentElement('beforeend', innerHTML);
+       ul.insertAdjacentElement('beforeend', studentList);
+       console.log(ul);
       }
    }
 }
-showPage(data,1);
+
 
 
 /*

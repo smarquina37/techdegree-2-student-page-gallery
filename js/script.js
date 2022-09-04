@@ -17,38 +17,31 @@ For assistance:
 Create the `showPage` function
 This function will create and insert/append the elements needed to display a "page" of nine students
 */
-function studentPage(list, page) {
-   const startIndex = (page * itemsPerPage) - itemsPerPage;
-   const endIndex = page * items 
+function showPage(list, page) {
+   const startIndex = (page * 9) - 9;
+   const endIndex = page * 9 
    const ul = document.querySelector('.student-list');
    ul.innerHTML = '';
-
    for (let i = 0; i < list.length; i++) {
       if (i >= startIndex && i < endIndex) {
-         
-         const li = document.createElement('li');
-         li.className = 'student-list cf';
-         
-         const div = document.createElement('div');
-         studentDiv.className = 'student-details';
-         
-         const img = document.createElement('img');
-         img.className = 'avatar';
+       html += `  
+         <li class='student-list cf'>
+            <div class='student-details'>
+               <img class='avatar'>
+               <h3>${list[i].name}</h3>
+               <span class='email'>${list[i].email}</span>
+            </div>
+            <div class='joined-details>
+               <span class='date'>${data[i].date}</span>
+            </div>
+         </li>
+       `
 
-         const h3 = document.createElement('h3');
-
-         const span = document.createElement('span');
-         emailSpan.className = 'email';
-
-         const detailsDiv = document.createElement('div');
-         joinedDiv.className = 'joined-details'
-
-         const dateSpan = document.createElement('span');
-         dateSpan.className = 'date';
-
+       ul.insertAdjacentElement('beforeend', html);
       }
    }
 }
+console.log(showPage());
 
 
 /*

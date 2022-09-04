@@ -24,7 +24,7 @@ function showPage(list, page) {
    ul.innerHTML = '';
    for (let i = 0; i < list.length; i++) {
       if (i >= startIndex && i < endIndex) {
-       html += `  
+     innerHTML += `  
          <li class='student-list cf'>
             <div class='student-details'>
                <img class='avatar'>
@@ -36,12 +36,11 @@ function showPage(list, page) {
             </div>
          </li>
        `
-
-       ul.insertAdjacentElement('beforeend', html);
+       ul.insertAdjacentElement('beforeend', innerHTML);
       }
    }
 }
-console.log(showPage());
+showPage(data,1);
 
 
 /*

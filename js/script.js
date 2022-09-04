@@ -37,7 +37,6 @@ function showPage(list, page) {
             </li>
        `
        ul.insertAdjacentElement('beforeend', studentList);
-       console.log(ul);
       }
    }
 }

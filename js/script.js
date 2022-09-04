@@ -32,7 +32,7 @@ function showPage(list, page) {
                <span class='email'>${list[i].email}</span>
             </div>
             <div class='joined-details>
-               <span class='date'>${data[i].date}</span>
+               <span class='date'>${list[i].date}</span>
             </div>
          </li>
        `

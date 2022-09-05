@@ -27,7 +27,7 @@ function showPage(list, page) {
          let studentList = `  
             <li class='student-list cf'>
                <div class='student-details'>
-                  <img class='avatar'>
+                  <img class='avatar' src='${list[i].picture.medium} alt="Profile Picture"'>
                   <h3>${list[i].name.first} ${list[i].name.last}</h3>
                   <span class='email'>${list[i].email}</span>
                </div>
@@ -36,10 +36,13 @@ function showPage(list, page) {
                </div>
             </li>
        `
-       ul.insertAdjacentElement('beforeend', studentList);
+       ul.insertAdjacentHTML('beforeend', studentList);
       }
    }
 }
+
+showPage(data, 1);
+
 
 
 

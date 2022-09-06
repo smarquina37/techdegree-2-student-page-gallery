@@ -1,1 +1,2 @@
 # techdegree-2-student-page-gallery
+In this project, I created two functions to dynamically display student information from a data file to display on the screen. In the showPage function, I created and appended the elements to display the student information (photo, email, date student joined) to the DOM. In the addPagination function, I created pagination buttons to append to the DOM so that users could click on each page to see new students. The 'active' page would also be highlighted when a user clicked through each page.

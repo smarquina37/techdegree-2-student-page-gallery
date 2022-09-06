@@ -73,6 +73,7 @@ function addPagination(list) {
       }
    })
 }
+
 // Call functions
 addPagination(data);
 showPage(data, 1);
